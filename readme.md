@@ -130,6 +130,7 @@ var_dump($comuni['comuni']);
     string(6) "Affile"
     ...
 */
+```
 
 
 ```
@@ -201,11 +202,11 @@ if ($disponibilita->availability > 0) {
 Per inviare un SMS, per prima cosa definiamo i destinatari:
 
 ```php
-$recipient = '+39-3939989741';
+$recipient = '+17637668404';
 // OR
 $recipients = [
     [
-        'number' => '+39-3939989741', 
+        'number' => '+17637668404', 
         'fields' => ['nome' => 'NomeDestinatario']
     ]
 ];
@@ -223,7 +224,7 @@ try {
 }
 ```
 
-Possiamo anche speficiare i prefissi in modo indipendente:
+Possiamo anche speficare i prefissi in modo indipendente:
 ```php
 $this->openapi->SMS->sendOne('Nome del mittente', '3939989741', 'lorem ipsum', '+42', 1, null);
 ```
@@ -255,11 +256,11 @@ $request->setJson(['$0' => 'abcd', '$1' => '12485671007']);
                     // url di callback,  oggetto con dati aggiuntivi, metodo
 $request->setCallbackData('https://example.com', new stdClass(), 'POST');
 $visura = $this->openapi->visengine->sendRequest($request);
-$recipient = '+39-3939989741';
+$recipient = '+17637668404';
 // OR
 $recipients = [
     [
-        'number' => '+39-3939989741', 
+        'number' => '+17637668404', 
         'fields' => ['nome' => 'NomeDestinatario']
     ]
 ];
